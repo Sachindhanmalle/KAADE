@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Dr. Arjun Mehta portrait illustration</title>
+  <desc id="desc">A professional medical portrait style illustration with teal and navy tones.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102a43"/>
+      <stop offset="100%" stop-color="#1f7a8c"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <circle cx="400" cy="250" r="145" fill="#f2c9a0"/>
+  <path d="M262 260c0-86 62-150 138-150s138 64 138 150c0 22-5 44-14 64-11-26-38-44-70-44H346c-32 0-59 18-70 44-9-20-14-42-14-64Z" fill="#243b53"/>
+  <rect x="220" y="470" width="360" height="260" rx="70" fill="url(#coat)"/>
+  <path d="M268 500c42 28 85 42 132 42s90-14 132-42l38 230H230l38-230Z" fill="#e2e8f0"/>
+  <path d="M318 245c0-18 14-32 32-32h100c18 0 32 14 32 32 0 12-7 23-18 29-16 8-37 14-64 14s-48-6-64-14c-11-6-18-17-18-29Z" fill="#102a43" opacity="0.18"/>
+  <circle cx="360" cy="252" r="10" fill="#102a43"/>
+  <circle cx="440" cy="252" r="10" fill="#102a43"/>
+  <path d="M375 295c14 10 36 10 50 0" stroke="#102a43" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M250 548c60 24 120 36 150 36s90-12 150-36v160H250V548Z" fill="#7c3aed" opacity="0.14"/>
+</svg>

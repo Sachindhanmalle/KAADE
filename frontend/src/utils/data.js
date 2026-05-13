@@ -4,7 +4,7 @@ export const doctorProfiles = [
     name: 'Dr. Arjun Mehta',
     specialization: 'Oncology Specialist',
     experience: '12 Years Experience',
-    image: 'https://images.unsplash.com/photo-1580281657523-98dbf0f55832?auto=format&fit=crop&w=800&q=80',
+    
     description: 'Compassionate oncologist focused on precision care and empathetic patient support.',
   },
   {
@@ -12,7 +12,7 @@ export const doctorProfiles = [
     name: 'Dr. Priya Sharma',
     specialization: 'Radiation Oncologist',
     experience: '10 Years Experience',
-    image: 'https://images.unsplash.com/photo-1542736667-069246bdbc7b?auto=format&fit=crop&w=800&q=80',
+    
     description: 'Expert in modern radiation therapy with excellent patient communication.',
   },
   {

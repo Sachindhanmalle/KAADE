@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
@@ -12,24 +11,9 @@ import AdminLogin from './pages/AdminLogin.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 
 function App() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    const saved = localStorage.getItem('kaadeTheme') || 'light';
-    setTheme(saved);
-    document.documentElement.classList.toggle('dark', saved === 'dark');
-  }, []);
-
-  const toggleTheme = () => {
-    const next = theme === 'light' ? 'dark' : 'light';
-    setTheme(next);
-    localStorage.setItem('kaadeTheme', next);
-    document.documentElement.classList.toggle('dark', next === 'dark');
-  };
-
   return (
-    <div className="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-500">
-      <Navbar theme={theme} onThemeToggle={toggleTheme} />
+    <div className="bg-white text-slate-900">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

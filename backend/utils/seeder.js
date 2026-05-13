@@ -5,7 +5,7 @@ const doctors = [
     name: 'Dr. Arjun Mehta',
     specialization: 'Oncology Specialist',
     experience: '12 Years Experience',
-    image: 'https://images.unsplash.com/photo-1580281657523-98dbf0f55832?auto=format&fit=crop&w=800&q=80',
+    image: '/doctor-arjun.svg',
     description: 'Compassionate oncologist focused on precision care and empathetic patient support.',
     availableSlots: [
       { date: '2026-05-18', times: ['09:00 AM', '11:00 AM', '02:00 PM'] },
@@ -16,7 +16,7 @@ const doctors = [
     name: 'Dr. Priya Sharma',
     specialization: 'Radiation Oncologist',
     experience: '10 Years Experience',
-    image: 'https://images.unsplash.com/photo-1542736667-069246bdbc7b?auto=format&fit=crop&w=800&q=80',
+    image: '/doctor-priya.svg',
     description: 'Expert in modern radiation therapy with excellent patient communication.',
     availableSlots: [
       { date: '2026-05-18', times: ['09:30 AM', '12:00 PM', '04:00 PM'] },

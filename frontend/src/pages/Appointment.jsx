@@ -5,8 +5,8 @@ const Appointment = () => (
     <section className="grid gap-8 lg:grid-cols-[0.9fr_0.7fr] items-start">
       <div className="space-y-6">
         <p className="text-sm uppercase tracking-[0.3em] text-emerald-700">Book appointment</p>
-        <h1 className="text-4xl font-semibold text-slate-950 dark:text-white">Schedule your consultation with KAADE specialists.</h1>
-        <p className="max-w-2xl text-base leading-7 text-slate-600 dark:text-slate-300">Choose your doctor, preferred time, and provide details so our team can confirm and support your visit.</p>
+        <h1 className="text-4xl font-semibold text-black">Schedule your consultation with KAADE specialists.</h1>
+        <p className="max-w-2xl text-base leading-7 text-black">Choose your doctor, preferred time, and provide details so our team can confirm and support your visit.</p>
       </div>
       <div className="rounded-[2.5rem] bg-gradient-to-br from-emerald-700 to-teal-500 p-8 text-white shadow-card">
         <h2 className="text-2xl font-semibold">Need assistance?</h2>
