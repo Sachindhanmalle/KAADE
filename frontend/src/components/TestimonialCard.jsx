@@ -1,5 +1,12 @@
+import { FiStar } from 'react-icons/fi';
+
 const TestimonialCard = ({ testimonial }) => (
   <div className="rounded-3xl border border-slate-200 bg-white/90 p-8 shadow-card dark:border-slate-700 dark:bg-slate-900/80">
+    <div className="flex mb-4">
+      {[...Array(5)].map((_, i) => (
+        <FiStar key={i} className="text-yellow-400 fill-current" />
+      ))}
+    </div>
     <p className="text-slate-700 dark:text-slate-200">“{testimonial.message}”</p>
     <div className="mt-6">
       <p className="font-semibold text-emerald-700">{testimonial.name}</p>

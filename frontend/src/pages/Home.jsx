@@ -1,17 +1,21 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FiHeart, FiZap, FiScissors, FiUsers } from 'react-icons/fi';
 import DoctorCard from '../components/DoctorCard.jsx';
 import StatsCard from '../components/StatsCard.jsx';
 import TestimonialCard from '../components/TestimonialCard.jsx';
 import { departments, doctorProfiles, stats, testimonials } from '../utils/data.js';
 
 const Home = () => (
-  <main className="mx-auto max-w-7xl px-6 pb-24 pt-8">
+  <main className="mx-auto max-w-7xl px-6 pb-24 pt-8 relative overflow-hidden">
+    <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-200/20 rounded-full blur-xl"></div>
+    <div className="absolute top-40 right-20 w-24 h-24 bg-blue-200/20 rounded-full blur-xl"></div>
+    <div className="absolute bottom-40 left-1/4 w-20 h-20 bg-purple-200/20 rounded-full blur-xl"></div>
     <section className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] items-center">
       <div className="space-y-6">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <p className="inline-flex rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-800">Premium oncology care</p>
-          <h1 className="mt-6 max-w-3xl text-5xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-6xl">
+          <h1 className="mt-6 max-w-3xl text-5xl font-semibold tracking-tight gradient-text sm:text-6xl">
             KAADE Hospital – Advanced Care. Trusted Doctors. Better Lives.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
@@ -66,12 +70,25 @@ const Home = () => (
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {departments.map((department) => (
-          <div key={department.name} className="section-card">
-            <p className="text-sm uppercase tracking-[0.3em] text-emerald-700">{department.name}</p>
-            <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">{department.description}</p>
-          </div>
-        ))}
+        {departments.map((department, index) => {
+          const icons = [FiHeart, FiZap, FiScissors, FiUsers];
+          const Icon = icons[index];
+          return (
+            <motion.div
+              key={department.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="section-card hover:scale-105 transition-all duration-300"
+            >
+              <div className="flex items-center gap-3">
+                <Icon className="text-2xl text-emerald-600" />
+                <p className="text-sm uppercase tracking-[0.3em] text-emerald-700">{department.name}</p>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">{department.description}</p>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
 
@@ -84,7 +101,17 @@ const Home = () => (
         <Link to="/doctors" className="rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600">View all doctors</Link>
       </div>
       <div className="grid gap-6 lg:grid-cols-4">
-        {doctorProfiles.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor} />)}
+        {doctorProfiles.map((doctor, index) => (
+          <motion.div
+            key={doctor.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className={index % 2 === 1 ? 'lg:mt-8' : ''}
+          >
+            <DoctorCard doctor={doctor} />
+          </motion.div>
+        ))}
       </div>
     </section>
 
@@ -104,7 +131,16 @@ const Home = () => (
         <h2 className="mt-4 text-3xl font-semibold text-slate-950 dark:text-white">Real stories from comforted patients.</h2>
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
-        {testimonials.map((testimonial) => <TestimonialCard key={testimonial.name} testimonial={testimonial} />)}
+        {testimonials.map((testimonial, index) => (
+          <motion.div
+            key={testimonial.name}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+          >
+            <TestimonialCard testimonial={testimonial} />
+          </motion.div>
+        ))}
       </div>
     </section>
 
@@ -119,20 +155,20 @@ const Home = () => (
           <p>• Secure patient follow-up track</p>
         </div>
       </div>
-      <div className="section-card">
-        <p className="text-sm uppercase tracking-[0.3em] text-emerald-700">FAQ</p>
+      <div className="section-card dark:bg-slate-950 dark:text-white">
+        <p className="text-sm uppercase tracking-[0.3em] text-emerald-200 dark:text-emerald-300">FAQ</p>
         <h2 className="mt-4 text-3xl font-semibold text-slate-950 dark:text-white">Common patient questions answered.</h2>
         <div className="mt-6 space-y-5 text-slate-600 dark:text-slate-300">
           <div>
-            <p className="font-semibold">How soon can I get an appointment?</p>
+            <p className="font-semibold text-slate-950 dark:text-white">How soon can I get an appointment?</p>
             <p className="mt-2 text-sm">Most cases are assigned within 24 hours based on doctor availability and care need.</p>
           </div>
           <div>
-            <p className="font-semibold">Can I consult online before visiting?</p>
+            <p className="font-semibold text-slate-950 dark:text-white">Can I consult online before visiting?</p>
             <p className="mt-2 text-sm">Yes, our online consultation option helps you connect with a specialist before your first hospital visit.</p>
           </div>
           <div>
-            <p className="font-semibold">What should I bring to my first appointment?</p>
+            <p className="font-semibold text-slate-950 dark:text-white">What should I bring to my first appointment?</p>
             <p className="mt-2 text-sm">Bring your medical records, test reports, and a list of symptoms so the care team can create a precise plan.</p>
           </div>
         </div>
