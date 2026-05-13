@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # KAADE Hospital
 
 Modern full-stack appointment booking platform for KAADE Hospital with premium healthcare design, React frontend, Node/Express backend, and MongoDB.
@@ -38,3 +39,6 @@ Modern full-stack appointment booking platform for KAADE Hospital with premium h
 - Admin login uses credentials from `backend/.env`
 - Use API URL in `frontend/.env` if backend is hosted elsewhere
 - Email service uses environment SMTP settings
+=======
+# KAADE
+>>>>>>> 21015d22c57b914a075a00e9847d7d19fc8bc173
